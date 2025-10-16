@@ -37,11 +37,11 @@ const row = document.getElementById('card-row');
 
 
   // button toggle when clicked
+const buttons = document.querySelectorAll('.btn-toggle');
 
-  const buttons = document.querySelectorAll('.btn-toggle');
-  buttons.forEach(btn => {
+  buttons.forEach((btn) => {
     btn.addEventListener('click', () => {
-      buttons.forEach(b => b.classList.remove('active'));
+      buttons.forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
     });
   });
