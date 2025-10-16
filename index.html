@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Organify Organic food inner page</title>
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons (optional but useful for cart, account icons, etc.) -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+        rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Young+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>  
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <header id="header"></header> -->
+    <!-- 🔹 Top Info Bar -->
+<div class="top-header bg-light border-bottom small py-1">
+  <div class="container d-flex justify-content-between align-items-center flex-wrap">
+    <span>
+      <i class="bi bi-bell text-danger me-1"></i>
+      Some orders may take longer to arrive due to shipper and supplier delays.
+      <a href="#" class="text-success text-decoration-none">Learn More</a>
+    </span>
+    <div class="d-flex align-items-center gap-3">
+      <a href="#" class="text-dark text-decoration-none"><i class="bi bi-question-circle"></i> Help Center</a>
+      <a href="#" class="text-dark text-decoration-none"><i class="bi bi-translate"></i> English</a>
+      <a href="#" class="text-dark text-decoration-none"><i class="bi bi-gift"></i> Gift Card</a>
+      <a href="#" class="text-dark text-decoration-none"><i class="bi bi-truck"></i> Track Order</a>
+    </div>
+  </div>
+</div>
+
+<!-- 🔹 Main Header -->
+<header class="py-3 border-bottom sticky-top bg-white shadow-sm">
+  <div class="container d-flex justify-content-between align-items-center">
+
+    <!-- Logo + Hamburger -->
+    <div class="d-flex align-items-center gap-2">
+      <!-- Hamburger button (only visible on mobile) -->
+      <button class="btn btn-outline-success d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <!-- Logo -->
+      <a href="index.html" class="navbar-brand d-flex align-items-center gap-2">
+        <img src="images/organify-logo.png" alt="Organify" style="height:40px;">
+      </a>
+    </div>
+
+    <!-- Desktop Nav -->
+    <nav class="d-none d-lg-block">
+      <ul class="nav">
+        <li class="nav-item"><a href="#" class="nav-link text-dark">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link text-dark">Shop</a></li>
+        <li class="nav-item"><a href="#" class="nav-link text-dark">Pages</a></li>
+        <li class="nav-item"><a href="#" class="nav-link text-dark">Blog</a></li>
+        <li class="nav-item"><a href="#" class="nav-link text-dark">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Search + Actions -->
+    <div class="d-flex align-items-center gap-3">
+      <div class="input-group d-none d-lg-flex" style="width:200px;">
+        <input type="text" class="form-control form-control-sm" placeholder="Search...">
+        <button class="btn btn-success btn-sm"><i class="bi bi-search"></i></button>
+      </div>
+
+      <a href="#" class="text-dark text-decoration-none"><i class="bi bi-person"></i></a>
+      <a href="#" class="text-dark text-decoration-none position-relative">
+        <i class="bi bi-heart"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge bg-success rounded-pill">0</span>
+      </a>
+      <a href="#" class="text-dark text-decoration-none position-relative">
+        <i class="bi bi-cart"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge bg-success rounded-pill">2</span>
+      </a>
+      <span class="fw-semibold d-none d-sm-inline">$25.00</span>
+    </div>
+  </div>
+</header>
+
+<!-- 🔹 Offcanvas Mobile Menu -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title text-success fw-bold" id="mobileMenuLabel">Organify Menu</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <!-- Search -->
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Search products...">
+      <button class="btn btn-success"><i class="bi bi-search"></i></button>
+    </div>
+
+    <!-- Nav Links -->
+    <ul class="list-unstyled">
+      <li><a href="#" class="d-block py-2 text-dark text-decoration-none">Home</a></li>
+      <li><a href="#" class="d-block py-2 text-dark text-decoration-none">Shop</a></li>
+      <li><a href="#" class="d-block py-2 text-dark text-decoration-none">Pages</a></li>
+      <li><a href="#" class="d-block py-2 text-dark text-decoration-none">Blog</a></li>
+      <li><a href="#" class="d-block py-2 text-dark text-decoration-none">Contact Us</a></li>
+    </ul>
+
+    <hr>
+
+    <!-- Contact / Account Info -->
+    <p class="small text-muted mb-1"><i class="bi bi-telephone"></i> +91 98765 43210</p>
+    <p class="small text-muted"><i class="bi bi-envelope"></i> support@organify.com</p>
+  </div>
+</div>
+
+    <main>
+        <div class="main-container">
+            <div class="main-content d-flex flex-column gap-3">
+                <span>Opening Sale Discount 30%</span>
+                <h1>Nature's Choice for healthy living</h1>
+                <p>Crafted with the highest quality organic, hi-oleic peanuts and  sea salt, this extra crunchy delight.</p>
+                <button>Purchase Now</button>
+            </div>  
+        </div>
+    </main>
+
+    <div class="center-container">
+    <div class="d-flex flex-column justify-content-center align-items-center">
+        <h2 class="center-heading">Wholesome Dairy Delights<br>Delivered Fresh to You</h2>
+    </div>
+
+    <div class="row m-2 mt-4 justify-content-center g-5">
+
+        <!-- Card 1 -->
+        <div class="col-sm-6 col-lg-3 mb-3 mb-sm-0">
+            <div style="background-color: #F6F6F6;" class="top-card">
+                <div class="card-body d-flex flex-column align-items-center justify-content-center gap-2">
+                    <div class="card-icon-circle bg-info rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                        <i class="bi bi-truck text-white fs-3"></i>
+                    </div>
+                    <p class="card-text text-center mt-2">Quick, No-Cost Delivery & Setup Included</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-sm-6 col-lg-3">
+            <div style="background-color: #f7eed8;" class="top-card">
+                <div class="card-body d-flex flex-column align-items-center justify-content-center gap-2">
+                    <div class="card-icon-circle bg-warning rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                        <i class="bi bi-shield-check text-white fs-3"></i>
+                    </div>
+                    <p class="card-text text-center mt-2">30-Day, No-Risk Money-Back Assurance</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-sm-6 col-lg-3 mb-3 mb-sm-0">
+            <div style="background-color: #f7e4e4;" class="top-card">
+                <div class="card-body d-flex flex-column align-items-center justify-content-center gap-2">
+                    <div class="card-icon-circle bg-danger rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                        <i class="bi bi-headset text-white fs-3"></i>
+                    </div>
+                    <p class="card-text text-center mt-2">24/7 Expert Help, Always Just a Click Away</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-sm-6 col-lg-3 col-12">
+            <div style="background-color: #d9eef4;" class="top-card">
+                <div class="card-body d-flex flex-column align-items-center justify-content-center gap-2">
+                    <div class="card-icon-circle bg-success rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                        <i class="bi bi-credit-card text-white fs-3"></i>
+                    </div>
+                    <p class="card-text text-center mt-2">Flexible Payments with Various Credit Card Options</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <div class="feature-categories"> 
+        <h2>Featured Categories</h2>
+        <div class="feature-small-cards">
+            <!-- Control Buttons -->
+             <div class="control-buttons-container">
+                <div class="control-buttons d-flex gap-2">
+                    <button id="btn-left" class="btn btn-outline-secondary btn-sm control-btn">‹</button>
+                    <button id="btn-right" class="btn btn-outline-secondary btn-sm control-btn">›</button>
+                </div>
+             </div>
+
+            <!-- Cards Row -->
+            <div class="row g-3" id="card-row">
+                
+                <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                <div class="card text-center">
+                    <img src="images/featured-1.png" class="card-img-top" alt="Sweet Snacks">
+                    <div class="card-body">
+                    <h5 class="card-title">Sauce</h5>
+                    <p class="card-text text-muted">1 Product</p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                <div class="card text-center">
+                    <img src="images/featured-2.png" class="card-img-top" alt="Fresh Fruits">
+                    <div class="card-body">
+                    <h5 class="card-title">Sweet snacks</h5>
+                    <p class="card-text text-muted">2 Products</p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                <div class="card text-center">
+                    <img src="images/featured-3.png" class="card-img-top" alt="Organic Vegetables">
+                    <div class="card-body">
+                    <h5 class="card-title">Vegan</h5>
+                    <p class="card-text text-muted">3 Products</p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                <div class="card text-center">
+                    <img src="images/featured-4.png" class="card-img-top" alt="Cold Drinks">
+                    <div class="card-body">
+                    <h5 class="card-title">Vegan curry</h5>
+                    <p class="card-text text-muted">4 Products</p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                <div class="card text-center">
+                    <img src="images/featured-5.png" class="card-img-top" alt="Dry Fruits">
+                    <div class="large-card-body">
+                    <h5 class="card-title">Vegeterian</h5>
+                    <p class="card-text text-muted">5 Products</p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-6 col-12">
+                    <div class="card text-center">
+                        <img src="images/featured-6.png" class="card-img-top" alt="Bakery Items">
+                        <div class="card-body">
+                            <h5 class="card-title">Pancakes</h5>
+                            <p class="card-text text-muted">6 Products</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+       <div class="container my-5">
+    <div class="row g-3 card-row-desktop">
+        
+        <!-- Card 1: Organic Honey -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="large-card full-height-card" style="background-image: url('images/large-card-organic-honey.jpeg');">
+                <div class="large-card-body">
+                    <h5 class="large-card-title">Organic Honey</h5>
+                    <p class="large-card-text">100% Organic, Always Fresh, Guaranteed Quality Products</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2: Pancakes -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="large-card full-height-card" style="background-image: url('images/large-card-pancake.jpeg');">
+                <div class="large-card-body">
+                    <h5 class="large-card-title">Delicious Pancakes</h5>
+                    <p class="large-card-text">Irresistibly Tasty Pancakes – Pure Delight! Guaranteed Quality Products</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Stacked Cards -->
+        <div class="col-12 col-lg-4">
+            <div class="row g-3 stacked-cards-wrapper tablet-break">
+                <!-- Card 3: Organic Fruits -->
+                <div class="col-12 col-md-6 col-lg-12">
+                    <div class="large-card half-card" style="background-image: url('images/large-card-apple.webp');">
+                        <div class="large-card-body">
+                            <h5 class="large-card-title">Organic Fruits</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Organic Seasonal -->
+                <div class="col-12 col-md-6 col-lg-12">
+                    <div class="large-card half-card" style="background-image: url('images/large-card-watermelon.webp');">
+                        <div class="large-card-body">
+                            <h5 class="large-card-title">Organic Seasonal</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+    </div>
+    <div class="all-products-container">
+        <div class="all-products-header-container mt-5 ml-5">
+            <h2>100% Organic, Always Fresh, Guaranteed Quality Products</h2>  
+            <div class="d-flex all-product-buttons">
+                <button class="btn btn-toggle active">All Products</button>
+                <button class="btn btn-toggle">Vegan</button>
+                <button class="btn btn-toggle">Crackers</button>
+                <button class="btn btn-toggle">Fruits</button>
+                <button class="btn btn-toggle">Sauce</button>
+                <button class="btn btn-toggle">Vegan Curry</button>
+            </div>
+        </div>
+        <div class="container mt-5 all-products-cards-container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                
+                <!-- Card 1 -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="/images/all-products-image-1.png" class="card-img-top" alt="Sauce">
+                        <div class="card-body">
+                        <h5 class="card-title">Sauce</h5>
+                        <p class="card-text">365 by Whole Foods Market, Syrup Maple</p>
+                        <p class="card-text">$6.25</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="/images/all-products-image-2.png" class="card-img-top" alt="Crackers">
+                        <div class="card-body">
+                        <h5 class="card-title">Crackers</h5>
+                        <p class="card-text">The Good Bean Crunchy Chickpeas, Sea Salt</p>
+                        <p class="card-text">$16.43</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="/images/all-products-image-3.png" class="card-img-top" alt="Fruits">
+                        <div class="card-body">
+                        <h5 class="card-title">Fruits</h5>
+                        <p class="card-text">Bundle of Black Forest Juicy Burst Fruit Snacks</p>
+                        <p class="card-text">$4.30</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cards 4-12 -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="/images/all-products-image-4.png" class="card-img-top" alt="Vegan">
+                        <div class="card-body">
+                        <h5 class="card-title">Vegan</h5>
+                        <p class="card-text">Delicious plant-based snack pack.</p>
+                        <p class="card-text">$8.50</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="/images/all-products-image-5.png" class="card-img-top" alt="Vegan Curry">
+                        <div class="card-body">
+                        <h5 class="card-title">Vegan Curry</h5>
+                        <p class="card-text">Ready-to-eat curry meal.</p>
+                        <p class="card-text">$12.75</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cards 6-12 -->
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="/images/all-products-image-6.png" class="card-img-top" alt="Item 6">
+                        <div class="card-body">
+                        <h5 class="card-title">Item 6</h5>
+                        <p class="card-text">Description for item 6.</p>
+                        <p class="card-text">$5.00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="/images/all-products-image-7.png" class="card-img-top" alt="Item 7">
+                        <div class="card-body">
+                        <h5 class="card-title">Item 7</h5>
+                        <p class="card-text">Description for item 7.</p>
+                        <p class="card-text">$7.25</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="/images/all-products-image-8.png" class="card-img-top" alt="Item 8">
+                        <div class="card-body">
+                        <h5 class="card-title">Item 8</h5>
+                        <p class="card-text">Description for item 8.</p>
+                        <p class="card-text">$9.10</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="/images/all-products-image-9.png" class="card-img-top" alt="Item 9">
+                        <div class="card-body">
+                        <h5 class="card-title">Item 9</h5>
+                        <p class="card-text">Description for item 9.</p>
+                        <p class="card-text">$4.80</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="/images/all-products-image-10.png" class="card-img-top" alt="Item 10">
+                        <div class="card-body">
+                        <h5 class="card-title">Item 10</h5>
+                        <p class="card-text">Description for item 10.</p>
+                        <p class="card-text">$11.30</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="/images/all-products-image-11.png" class="card-img-top" alt="Item 11">
+                        <div class="card-body">
+                        <h5 class="card-title">Item 11</h5>
+                        <p class="card-text">Description for item 11.</p>
+                        <p class="card-text">$6.60</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="/images/all-products-image-12.png" class="card-img-top" alt="Item 12">
+                        <div class="card-body">
+                        <h5 class="card-title">Item 12</h5>
+                        <p class="card-text">Description for item 12.</p>
+                        <p class="card-text">$8.90</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-100 d-flex justify-content-center align-items-center pt-5">
+                    <button class="btn btn-lg" style="background-color: green; color: white;font-size: 1.25rem; padding: 12px 30px;">
+                        More Products +
+                    </button>
+                </div> 
+            </div>
+        </div>
+
+    </div>
+    <div class="peach-ginger-card text-center">
+    <h2>Pure Organic Peach Ginger Delightful Refreshment</h2>
+
+    <div class="container mt-5">
+        <div class="row row-cols-1 row-cols-md-2 g-3"> <!-- g-3 adds a slight gap -->
+
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="peach-ginger-category-card h-100 d-flex gap-3 align-items-start">
+                    <img src="images/peach-ginger-1.png" class="img-fluid" style="max-width: 90px;" alt="">
+                    <div>
+                        <h3>Naturally Sweet Flavour</h3>
+                        <p>Savor the naturally sweet flavor of juicy peaches, perfectly complemented by a hint of ginger for a refreshingly drink.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="peach-ginger-category-card h-100 d-flex gap-3 align-items-start">
+                    <img src="images/peach-ginger-2.png" class="img-fluid" style="max-width: 90px;" alt="">
+                    <div>
+                        <h3>Boosts Natural Energy</h3>
+                        <p>Boost your natural energy with every sip of our Peach Ginger drink, blending fruity sweetness with a revitalizing ginger.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="peach-ginger-category-card h-100 d-flex gap-3 align-items-center">
+                    <img src="images/peach-ginger-3.png" class="img-fluid" style="max-width: 90px;" alt="">
+                    <div>
+                        <h3>Invigorating Ginger Kick</h3>
+                        <p>Experience an invigorating ginger kick that adds a bold, zesty twist to every sip, leaving you refreshed and energized.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col">
+                <div class="peach-ginger-category-card h-100 d-flex gap-3 align-items-center">
+                    <img src="images/peach-ginger-4.png" class="img-fluid" style="max-width: 90px;" alt="">
+                    <div>
+                        <h3>Crist Refreshing Taste</h3>
+                        <p>Experience a crisp, refreshing taste with every sip of Peach Ginger, blending vibrant fruitiness with a hint of zest.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Button below the cards -->
+        <div class="text-center mt-4 ginger-btn-container">
+            <button class="btn btn-lg" style="background-color: #fddb31; color: black; font-size: 1.25rem; padding: 12px 30px;">
+                Browse All Products +
+            </button>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+
+    </div>
+    <div class="customer-reviews-container mt-5">
+        <div class="customer-review-header d-flex justify-content-center align-items-center pb-5">
+            <h2>Customer Praise for Our Organic Online Store</h2>
+        </div>
+        <div class="customer-review-cards-container">
+            
+  <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <div class="carousel-slide-content">
+          <div class="carousel-content-container">
+          <div class="carousel-img-container">
+            <img src="images/customer-review-1.jpg" alt="Customer 2">
+          </div>
+            <p>“I’m thrilled with my purchases from this organic food store!  
+            The quality is exceptional, the delivery is prompt, and everything tastes amazing.”</p>
+            <div class="carousel-footer-container">
+                <h4>Sane Smith</h4>
+                <p>Executive Direction, One Stop Solutions LLC.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="carousel-slide-content">
+          <div class="carousel-content-container">
+
+          <div class="carousel-img-container">
+            <img src="images/customer-review-2.jpg" alt="Customer 2">
+          </div>
+            <p>“I'm really impressed with my orders from this organic food store! The quality of everything is outstanding, the delivery is quick and efficient, and the taste is just perfect.”</p>
+            <div class="carousel-footer-container">
+                <h4>Victor Adams</h4>
+                <p>Executive Direction, One Stop Solutions LLC.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="carousel-slide-content">
+          <div class="carousel-content-container">
+          <div class="carousel-img-container">
+            <img src="images/customer-review-3.png" alt="Customer 3">
+          </div>
+            <p>“I'm extremely pleased with my recent purchases from this organic food store! The products are of top-notch quality, the delivery is always on time, and the flavors are absolutely fantastic.”</p>
+            <div class="carousel-footer-container">
+                <h4>Oliver Spiteri</h4>
+                <p>Executive Direction, One Stop Solutions LLC.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+        </div>
+    </div>
+
+    <div class="new-food-shop-online-container mt-5">
+        <div class="organic-food-shop-header d-flex justify-content-center align-items-center pb-5">
+            <h2>Exciting New Organic Food Shop Launches Online</h2>
+        </div>
+        <div class="new-food-shop-online-cards-container">
+            
+  <div class="container my-5">
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card custom-card h-100">
+          <img src="images/new-shop-1.jpg" class="card-img-top" alt="Card 1">
+          <div class="card-body">
+            <h5 class="card-title">Card One</h5>
+            <p class="card-text">This is a description for the first card. You can add more details about what this card represents.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card custom-card h-100">
+          <img src="images/new-shop-2.jpg" class="card-img-top" alt="Card 2">
+          <div class="card-body">
+            <h5 class="card-title">Card Two</h5>
+            <p class="card-text">This is a description for the second card. Add details to explain the content of the card.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card custom-card h-100">
+          <img src="images/new-shop-3.jpg" class="card-img-top" alt="Card 3">
+          <div class="card-body">
+            <h5 class="card-title">Card Three</h5>
+            <p class="card-text">This is a description for the third card. You can include more text here to describe the card.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Button below the cards -->
+        <div class="text-center mt-4 ginger-btn-container">
+            <button class="btn btn-lg" style="background-color: green; color: white; font-size: 1.25rem; padding: 12px 30px;">
+                Browse All News + 
+            </button>
+        </div>
+    </div>
+  </div>
+        </div>
+    </div>
+    <!-- <div class="instagram-page">
+        <h3>Follow us on instagram icon @organify</h3>
+    </div> -->
+    <div class="mail-us-container">
+    <div class="mail-us-header">
+      <h2>Stay Updated: Subscribe for Organic Food News and Exclusive Offers</h2>
+    </div>
+    <div class="mail-us-form-container">
+      <form class="mail-us-form">
+        <input type="email" placeholder="Enter your mail here">
+        <button type="submit">Get Subscribed</button>
+      </form>
+    </div>
+  </div>
+     <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Logo Column -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="footer-logo">
+                        <img src="images/organify-logo.png" alt="Organify" style="height:60px;">
+                        <div class="footer-brand">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company Links -->
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <ul class="footer-links">
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#stories">Our Stories</a></li>
+                        <li><a href="#news">News & Blogs</a></li>
+                        <li><a href="#corporate">Corporate Information</a></li>
+                    </ul>
+                </div>
+
+                <!-- Service Links -->
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <ul class="footer-links">
+                        <li><a href="#payments">Payments</a></li>
+                        <li><a href="#shipping">Shipping</a></li>
+                        <li><a href="#cancellation">Cancellation & Returns</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#report">Report Infringement</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal Links -->
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <ul class="footer-links">
+                        <li><a href="#terms">Terms of Use</a></li>
+                        <li><a href="#security">Security</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#sitemap">Sitemap</a></li>
+                        <li><a href="#gdpr">GDPR Compliance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="contact-info">
+                        <p><strong>Address :</strong><br>
+                        327 Park Ave S, New York, NY 10010 United States</p>
+                        
+                        <p><strong>Hours :</strong><br>
+                        Mon-Fri: 9 AM to 5 PM</p>
+                        
+                        <p><strong>Phone :</strong><br>
+                        +1 877 217 8371</p>
+                    </div>
+                    
+                    <div class="social-icons">
+                        <a href="#facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#twitter" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS (for dropdowns, collapse menus, etc.) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+
+    <script src="index.js"></script>
+</body>
+</html>
