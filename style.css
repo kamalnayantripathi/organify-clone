@@ -167,7 +167,6 @@ h1 {
 .card-img-top {
   border-radius: 16px;
   width: 80%;
-  /* height: 160px; */
   object-fit: cover;
   margin-top: 10px;
 }
@@ -176,7 +175,7 @@ h1 {
   position: relative;
 }
 
-/* Make sure buttons stay visible on top right */
+/* buttons stay visible on top right */
 .control-buttons {
   position: absolute;
   right: 30px;
